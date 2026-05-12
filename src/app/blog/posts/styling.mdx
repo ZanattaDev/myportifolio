@@ -1,83 +1,20 @@
 ---
-title: "Styling your portfolio"
-summary: "Magic Portfolio's styling is based on Once UI's customization through data-attributes."
-image: "/images/gallery/horizontal-3.jpg"
-publishedAt: "2025-04-21"
-tag: "Magic Portfolio"
+title: "O Que Eu Recomendo para Desenvolvedores Juniores em 2025"
+publishedAt: "2025-05-11"
+summary: "Conselhos sinceros baseados na minha própria jornada como desenvolvedor."
+image: "/images/blog/junior-dev.jpg"
+tags: ["Carreira", "Dicas", "Desenvolvimento"]
 ---
 
-## Global style
+## Conselhos para quem está começando
 
-Magic Portfolio's styling is based on Once UI's customization through data-attributes. You can generate a custom color palette for brand, accent and neutral colors on [Once UI](https://once-ui.com/customize) where you'll find instructions on how to apply it.
+Estou ainda no 2º ano do técnico, mas já passei por várias dificuldades que a maioria dos iniciantes enfrenta.
 
-<CodeBlock
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`theme:       'dark',         // dark | light
-neutral:     'gray',         // sand | gray | slate
-brand:       'blue',         // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-accent:      'indigo',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-solid:       'contrast',     // color | contrast
-solidStyle:  'flat',         // flat | plastic
-border:      'playful',      // rounded | playful | conservative
-surface:     'translucent',  // filled | translucent
-transition:  'all',          // all | micro | macro
-scaling:     '100',          // 90 | 95 | 100 | 105 | 110`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+### Principais recomendações:
+- Foque em uma área (eu escolhi Backend + FiveM)
+- Faça projetos reais (mesmo que pequenos)
+- Aprenda Git desde o início
+- Não tenha medo de mostrar seus projetos
+- Consistência é mais importante que perfeição
 
-## Background effect
-
-There's a pre-configured background in `layout.tsx` that you can modify in the config file. Set graphic elements such as gradient, dots, lines, and grid and configure their appearance.
-
-<CodeBlock
-    codeHeight={24}
-    marginBottom="16"
-    codes={[
-  {
-    code:
-`const effects = {
-    mask: {
-      cursor: false,
-      x: 50,
-      y: 0,
-      radius: 100
-    },
-    gradient: {
-      display: true,
-      x: 50,
-      y: -25,
-      width: 100,
-      height: 100,
-      tilt: 0,
-      colorStart: 'accent-background-strong',
-      colorEnd: 'static-transparent',
-      opacity: 50
-    },
-    dots: {
-      display: true,
-      size: 2,
-      color: 'brand-on-background-weak',
-      opacity: 20
-    },
-    lines: {
-      display: false,
-      color: 'neutral-alpha-weak',
-      opacity: 100
-    },
-    grid: {
-      display: false,
-      color: 'neutral-alpha-weak',
-      opacity: 100,
-      width: 'var(--static-space-32)',
-      height: 'var(--static-space-32)'
-    }
-}`, 
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
+E muito mais...
