@@ -61,7 +61,10 @@ const about: About = {
     description: "Conheça Pedro Henrique Zanatta",
     tableOfContent: { display: true, subItems: false },
     avatar: { display: true },
-    calendar: { display: false },
+    calendar: { 
+        display: false, 
+        link: ""   // ← Obrigatório mesmo quando display é false
+    },
 
     intro: {
         display: true,
