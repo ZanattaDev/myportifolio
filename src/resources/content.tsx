@@ -6,7 +6,7 @@ const person: Person = {
     firstName: "Pedro",
     lastName: "Zanatta",
     name: "Pedro Henrique Zanatta",
-    role: "Desenvolvedor Backend & iOS",
+    role: "Desenvolvedor Backend & FiveM",
     avatar: "/images/avatar.jpg",
     email: "pedrohztt30@gmail.com",
     location: "America/Sao_Paulo",
@@ -38,27 +38,18 @@ const home: Home = {
     path: "/",
     image: "/images/og/home.jpg",
     label: "Home",
-    title: `${person.name} — Dev`,
-    description: "Desenvolvedor Backend, iOS e criador de cidades para FiveM.",
-    headline: <>Backend • iOS • FiveM Development</>,
+    title: "Pedro Henrique Zanatta — Desenvolvedor",
+    description: "Desenvolvedor Backend especializado em sistemas robustos e desenvolvimento FiveM.",
+    headline: <>Backend Developer • FiveM Creator</>,
     featured: {
         display: true,
-        title: (
-            <Row gap="12" vertical="center">
-                <Text weight="strong">Projetos em Destaque</Text>
-                <Line background="brand-alpha-strong" vert height="20" />
-                <Text variant="body-default-s" onBackground="neutral-weak">
-                    Backend · iOS · FiveM
-                </Text>
-            </Row>
-        ),
+        title: "Projetos em Destaque",
         href: "/work",
     },
     subline: (
         <>
-            Desenvolvedor Backend, iOS e criador de cidades para{" "}
-            <Text as="span" variant="body-default-xl" weight="strong">FiveM</Text>. 
-            Transformando ideias em sistemas bem arquitetados e código eficiente.
+            Desenvolvedor Backend e criador de cidades para FiveM. 
+            Transformando ideias em sistemas eficientes e bem arquitetados.
         </>
     ),
 };
@@ -66,106 +57,90 @@ const home: Home = {
 const about: About = {
     path: "/about",
     label: "Sobre",
-    title: `Sobre – ${person.name}`,
-    description: "Quem sou eu? Conheça Pedro Henrique Zanatta",
+    title: "Sobre Mim",
+    description: "Conheça Pedro Henrique Zanatta",
     tableOfContent: { display: true, subItems: false },
     avatar: { display: true },
-    calendar: { 
-        display: false, 
-        link: "https://cal.com" 
-    },
+    calendar: { display: false },
+
     intro: {
         display: true,
         title: "Introdução",
         description: (
             <>
                 <Text as="p" variant="body-default-m" marginBottom="m">
-                    Estou no 2º ano do Técnico em Informática no CEDUP Abílio Paulo, em Criciúma/SC. 
-                    Apaixonado por tecnologia e movido pela curiosidade de entender sistemas a fundo.
-                </Text>
-                <Text as="p" variant="body-default-m" marginBottom="m">
-                    Desenvolvo sistemas Backend robustos com Java, PHP, TypeScript e C#, aplicativos iOS nativos 
-                    com Swift e SwiftUI, e cidades completas para servidores FiveM.
+                    Sou estudante do 2º ano do Técnico em Informática no CEDUP Abílio Paulo (Criciúma/SC). 
+                    Apaixonado por desenvolvimento Backend e criação de sistemas completos.
                 </Text>
                 <Text as="p" variant="body-default-m">
-                    Sempre buscando entregar código limpo, bem arquitetado e que realmente resolva o problema.
+                    Tenho mais de 2 anos de experiência desenvolvendo soluções personalizadas, 
+                    APIs robustas e cidades para servidores FiveM.
                 </Text>
             </>
         ),
     },
-    work: { 
-        display: true, 
-        title: "Experiência", 
+
+    work: {
+        display: true,
+        title: "Experiência",
         experiences: [
             {
                 company: "Desenvolvedor Independente",
                 timeframe: "2022 — Presente",
-                role: "Desenvolvedor Backend e de Jogos",
+                role: "Desenvolvedor Backend e FiveM",
                 achievements: [
-                    "Mais de 2 anos desenvolvendo soluções personalizadas e arquitetura de sistemas.",
-                    "Criação de sistemas backend robustos e escaláveis.",
-                    "Desenvolvimento de cidades completas para servidores FiveM."
+                    "Mais de 2 anos criando soluções personalizadas e arquiteturas de sistemas.",
+                    "Desenvolvimento de sistemas backend escaláveis e de alta performance.",
+                    "Criação de cidades completas e sistemas complexos para FiveM."
                 ],
-                images: [], 
+                images: [],
             }
-        ] 
+        ]
     },
+
     studies: {
         display: true,
         title: "Formação",
         institutions: [
             {
                 name: "CEDUP Abílio Paulo",
-                description: "Técnico em Informática — Criciúma, Santa Catarina, Brasil",
+                description: "Técnico em Informática — Criciúma, Santa Catarina",
             },
         ],
     },
+
     technical: {
         display: true,
-        title: "Stack Técnica",
+        title: "Tecnologias",
         skills: [
             {
-                title: "Backend Development",
-                description: "APIs robustas, lógica de negócios eficiente e sistemas escaláveis.",
+                title: "Backend",
+                description: "Desenvolvimento de APIs e sistemas robustos.",
                 tags: [
                     { name: "Java" },
-                    { name: "PHP" },
                     { name: "TypeScript" },
+                    { name: "PHP" },
                     { name: "C#" },
-                    { name: "OOP" },
-                ],
-                images: [],
-            },
-            {
-                title: "Mobile — iOS",
-                description: "Apps nativos para iPhone com SwiftUI seguindo as Human Interface Guidelines da Apple.",
-                tags: [
-                    { name: "Swift" },
-                    { name: "SwiftUI" },
-                    { name: "Nativo" },
                 ],
                 images: [],
             },
             {
                 title: "FiveM Development",
-                description: "Scripts de gameplay customizados, HUD, sistema de economia e banco de dados.",
+                description: "Criação de cidades, sistemas e scripts customizados.",
                 tags: [
                     { name: "Lua" },
                     { name: "JavaScript" },
-                    { name: "HTML" },
-                    { name: "CSS" },
-                    { name: "SQL" },
+                    { name: "MySQL" },
                 ],
                 images: [],
             },
             {
                 title: "Ferramentas",
-                description: "Modelagem de dados relacional, autenticação segura e versionamento.",
+                description: "Banco de dados, versionamento e outras ferramentas.",
                 tags: [
-                    { name: "MySQL" },
-                    { name: "HeidiSQL" },
                     { name: "Git" },
                     { name: "GitHub" },
+                    { name: "HeidiSQL" },
                 ],
                 images: [],
             },
@@ -176,29 +151,29 @@ const about: About = {
 const work: Work = {
     path: "/work",
     label: "Projetos",
-    title: `Projetos – ${person.name}`,
-    description: "Principais trabalhos em Backend, iOS e desenvolvimento de cidades FiveM.",
+    title: "Meus Projetos",
+    description: "Principais projetos desenvolvidos em Backend e FiveM.",
 };
 
 const blog: Blog = {
     path: "/blog",
     label: "Blog",
-    title: "Blog & Aprendizados",
-    description: "Artigos, tutoriais e experiências em Backend, iOS e FiveM",
+    title: "Blog",
+    description: "Artigos e aprendizados",
 };
 
 const gallery: Gallery = {
     path: "/gallery",
     label: "Galeria",
-    title: `Galeria – ${person.name}`,
-    description: "Portfólio visual de projetos.",
+    title: "Galeria",
+    description: "Alguns projetos visuais",
     images: [],
 };
 
 const newsletter: Newsletter = {
     display: true,
-    title: <>Vamos trabalhar juntos?</>,
-    description: <>Aberto a projetos freelance, colaborações e novas oportunidades. Respondo rápido.</>,
+    title: "Vamos trabalhar juntos?",
+    description: "Estou aberto a novos projetos, freelas e colaborações.",
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
