@@ -44,9 +44,9 @@ const home: Home = {
         display: true,
         title: (
             <Row gap="12" vertical="center">
-                <strong className="ml-4">Projetos em Destaque</strong>{" "}
+                <Text weight="strong">Projetos em Destaque</Text>
                 <Line background="brand-alpha-strong" vert height="20" />
-                <Text style={{ color: 'var(--text-tertiary)', fontWeight: '400', fontSize: '13px' }}>
+                <Text variant="body-default-s" onBackground="neutral-weak">
                     Backend · iOS · FiveM
                 </Text>
             </Row>
@@ -55,7 +55,7 @@ const home: Home = {
     },
     subline: (
         <>
-            Desenvolvedor Backend, iOS e criador de cidades para <Text as="span" size="xl" weight="strong">FiveM</Text>. 
+            Desenvolvedor Backend, iOS e criador de cidades para <Text as="span" variant="body-default-xl" weight="strong">FiveM</Text>. 
             Transformando ideias em sistemas bem arquitetados e código eficiente.
         </>
     ),
@@ -77,17 +77,17 @@ const about: About = {
         title: "Introdução",
         description: (
             <>
-                <p>
+                <Text as="p" variant="body-default-m" marginBottom="m">
                     Estou no 2º ano do Técnico em Informática no CEDUP Abílio Paulo, em Criciúma/SC. 
                     Apaixonado por tecnologia e movido pela curiosidade de entender sistemas a fundo.
-                </p>
-                <p>
+                </Text>
+                <Text as="p" variant="body-default-m" marginBottom="m">
                     Desenvolvo sistemas Backend robustos com Java, PHP, TypeScript e C#, aplicativos iOS nativos 
                     com Swift e SwiftUI, e cidades completas para servidores FiveM.
-                </p>
-                <p>
+                </Text>
+                <Text as="p" variant="body-default-m">
                     Sempre buscando entregar código limpo, bem arquitetado e que realmente resolva o problema.
-                </p>
+                </Text>
             </>
         ),
     },
@@ -100,7 +100,7 @@ const about: About = {
                 timeframe: "2022 — Presente",
                 role: "Backend & Game Dev",
                 description: <>Mais de 2 anos desenvolvendo soluções personalizadas e arquitetura de sistemas.</>,
-                images: [],
+                images: [], 
             }
         ] 
     },
@@ -126,20 +126,20 @@ const about: About = {
             },
             {
                 title: "Mobile — iOS",
-                description: <>Aplicativos nativos para iPhone com SwiftUI seguindo as Human Interface Guidelines da Apple.</>,
+                description: <>Apps nativos para iPhone com SwiftUI seguindo as Human Interface Guidelines da Apple.</>,
                 tags: [{ name: "Swift" }, { name: "SwiftUI" }, { name: "Nativo" }],
                 images: [],
             },
             {
                 title: "FiveM Development",
-                description: <>Servidores do zero: scripts de gameplay customizados, HUD, sistema de economia, inventário e integração com banco de dados.</>,
+                description: <>Scripts de gameplay customizados, HUD, sistema de economia e banco de dados.</>,
                 tags: [{ name: "Lua" }, { name: "JavaScript" }, { name: "HTML" }, { name: "CSS" }, { name: "SQL" }],
                 images: [],
             },
             {
-                title: "Banco de Dados & Ferramentas",
-                description: <>Modelagem de dados relacional, autenticação segura e versionamento de código.</>,
-                tags: [{ name: "MySQL" }, { name: "HeidiSQL" }, { name: "Git" }, { name: "GitHub" }, { name: "REST API" }],
+                title: "Ferramentas",
+                description: <>Modelagem de dados relacional, autenticação segura e versionamento.</>,
+                tags: [{ name: "MySQL" }, { name: "HeidiSQL" }, { name: "Git" }, { name: "GitHub" }],
                 images: [],
             },
         ],
