@@ -1,10 +1,11 @@
+import React from "react";
 import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
     firstName: "Pedro",
     lastName: "Zanatta",
-    name: `Pedro Henrique Zanatta`,
+    name: "Pedro Henrique Zanatta",
     role: "Desenvolvedor Backend & iOS",
     avatar: "/images/avatar.jpg",
     email: "pedrohztt30@gmail.com",
@@ -22,7 +23,7 @@ const social: Social = [
     {
         name: "Email",
         icon: "email",
-        link: `mailto:pedrohztt30@gmail.com`,
+        link: "mailto:pedrohztt30@gmail.com",
         essential: true,
     },
     {
@@ -38,7 +39,7 @@ const home: Home = {
     image: "/images/og/home.jpg",
     label: "Home",
     title: `${person.name} — Dev`,
-    description: `Desenvolvedor Backend, iOS e criador de cidades para FiveM.`,
+    description: "Desenvolvedor Backend, iOS e criador de cidades para FiveM.",
     headline: <>Backend • iOS • FiveM Development</>,
     featured: {
         display: true,
@@ -55,7 +56,8 @@ const home: Home = {
     },
     subline: (
         <>
-            Desenvolvedor Backend, iOS e criador de cidades para <Text as="span" variant="body-default-xl" weight="strong">FiveM</Text>. 
+            Desenvolvedor Backend, iOS e criador de cidades para{" "}
+            <Text as="span" variant="body-default-xl" weight="strong">FiveM</Text>. 
             Transformando ideias em sistemas bem arquitetados e código eficiente.
         </>
     ),
@@ -65,7 +67,7 @@ const about: About = {
     path: "/about",
     label: "Sobre",
     title: `Sobre – ${person.name}`,
-    description: `Quem sou eu? Conheça Pedro Henrique Zanatta`,
+    description: "Quem sou eu? Conheça Pedro Henrique Zanatta",
     tableOfContent: { display: true, subItems: false },
     avatar: { display: true },
     calendar: { 
@@ -99,7 +101,7 @@ const about: About = {
                 company: "Desenvolvedor Independente",
                 timeframe: "2022 — Presente",
                 role: "Backend & Game Dev",
-                description: <>Mais de 2 anos desenvolvendo soluções personalizadas e arquitetura de sistemas.</>,
+                description: "Mais de 2 anos desenvolvendo soluções personalizadas e arquitetura de sistemas.",
                 images: [], 
             }
         ] 
@@ -110,7 +112,7 @@ const about: About = {
         institutions: [
             {
                 name: "CEDUP Abílio Paulo",
-                description: <>Técnico em Informática — Criciúma, Santa Catarina, Brasil</>,
+                description: "Técnico em Informática — Criciúma, Santa Catarina, Brasil",
             },
         ],
     },
@@ -120,26 +122,47 @@ const about: About = {
         skills: [
             {
                 title: "Backend Development",
-                description: <>APIs robustas, lógica de negócios eficiente e sistemas escaláveis.</>,
-                tags: [{ name: "Java" }, { name: "PHP" }, { name: "TypeScript" }, { name: "C#" }, { name: "OOP" }],
+                description: "APIs robustas, lógica de negócios eficiente e sistemas escaláveis.",
+                tags: [
+                    { name: "Java" },
+                    { name: "PHP" },
+                    { name: "TypeScript" },
+                    { name: "C#" },
+                    { name: "OOP" },
+                ],
                 images: [],
             },
             {
                 title: "Mobile — iOS",
-                description: <>Apps nativos para iPhone com SwiftUI seguindo as Human Interface Guidelines da Apple.</>,
-                tags: [{ name: "Swift" }, { name: "SwiftUI" }, { name: "Nativo" }],
+                description: "Apps nativos para iPhone com SwiftUI seguindo as Human Interface Guidelines da Apple.",
+                tags: [
+                    { name: "Swift" },
+                    { name: "SwiftUI" },
+                    { name: "Nativo" },
+                ],
                 images: [],
             },
             {
                 title: "FiveM Development",
-                description: <>Scripts de gameplay customizados, HUD, sistema de economia e banco de dados.</>,
-                tags: [{ name: "Lua" }, { name: "JavaScript" }, { name: "HTML" }, { name: "CSS" }, { name: "SQL" }],
+                description: "Scripts de gameplay customizados, HUD, sistema de economia e banco de dados.",
+                tags: [
+                    { name: "Lua" },
+                    { name: "JavaScript" },
+                    { name: "HTML" },
+                    { name: "CSS" },
+                    { name: "SQL" },
+                ],
                 images: [],
             },
             {
                 title: "Ferramentas",
-                description: <>Modelagem de dados relacional, autenticação segura e versionamento.</>,
-                tags: [{ name: "MySQL" }, { name: "HeidiSQL" }, { name: "Git" }, { name: "GitHub" }],
+                description: "Modelagem de dados relacional, autenticação segura e versionamento.",
+                tags: [
+                    { name: "MySQL" },
+                    { name: "HeidiSQL" },
+                    { name: "Git" },
+                    { name: "GitHub" },
+                ],
                 images: [],
             },
         ],
@@ -150,7 +173,7 @@ const work: Work = {
     path: "/work",
     label: "Projetos",
     title: `Projetos – ${person.name}`,
-    description: `Principais trabalhos em Backend, iOS e desenvolvimento de cidades FiveM.`,
+    description: "Principais trabalhos em Backend, iOS e desenvolvimento de cidades FiveM.",
 };
 
 const blog: Blog = {
