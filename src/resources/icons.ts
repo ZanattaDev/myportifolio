@@ -1,5 +1,4 @@
 import { IconType } from "react-icons";
-
 import {
   HiArrowUpRight,
   HiOutlineLink,
@@ -12,6 +11,7 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiOutlineChatBubbleLeft,     // ← Adicionado para "message"
 } from "react-icons/hi2";
 
 import {
@@ -29,7 +29,20 @@ import {
   SiSupabase,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { 
+  FaDiscord, 
+  FaGithub, 
+  FaLinkedin, 
+  FaX, 
+  FaThreads, 
+  FaInstagram, 
+  FaXTwitter, 
+  FaFacebook, 
+  FaPinterest, 
+  FaWhatsapp, 
+  FaReddit, 
+  FaTelegram, 
+} from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -64,6 +77,11 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+
+  // Ícones adicionados para resolver o erro
+  message: HiOutlineChatBubbleLeft,     // ← Solução principal
+  chat: HiOutlineChatBubbleLeft,
+  mail: HiEnvelope,
 };
 
 export type IconLibrary = typeof iconLibrary;
