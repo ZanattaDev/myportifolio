@@ -1,43 +1,43 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
-import { Projects } from "@/components/work/Projects";
+import { getPosts } from "@/utils/utils";
+import { Column } from "@once-ui-system/core";
+import { ProjectCard } from "@/components";
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: work.title,
-    description: work.description,
-    baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(work.title)}`,
-    path: work.path,
-  });
+interface ProjectsProps {
+  range?: [number, number?];
+  exclude?: string[];
 }
 
-export default function Work() {
+export function Projects({ range, exclude }: ProjectsProps) {
+  let allProjects = getPosts(["src", "app", "work", "projects"]);
+
+  // Exclude by slug
+  if (exclude && exclude.length > 0) {
+    allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
+  }
+
+  const sortedProjects = allProjects.sort((a, b) => {
+    return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+  });
+
+  const displayedProjects = range
+    ? sortedProjects.slice(range[0] - 1, range[1] ?? sortedProjects.length)
+    : sortedProjects;
+
   return (
-    <Column maxWidth="m" paddingTop="24">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        path={work.path}
-        title={work.title}
-        description={work.description}
-        image={`/api/og/generate?title=${encodeURIComponent(work.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
-      />
-
-      <Heading 
-        marginBottom="l" 
-        variant="heading-strong-xl" 
-        align="center"
-      >
-        {work.title}
-      </Heading>
-
-      <Projects />
+    <Column fillWidth gap="xl" marginBottom="40" paddingX="l">
+      {displayedProjects.map((post, index) => (
+        <ProjectCard
+          priority={index < 2}
+          key={post.slug}
+          href={`/work/${post.slug}`}
+          images={post.metadata.images}
+          title={post.metadata.title}
+          description={post.metadata.summary}
+          content={post.content}
+          avatars={post.metadata.team?.map((member: any) => ({ src: member.avatar })) || []}
+          link={post.metadata.link || ""}
+        />
+      ))}
     </Column>
   );
 }
