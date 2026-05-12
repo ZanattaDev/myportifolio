@@ -100,8 +100,12 @@ const about: About = {
             {
                 company: "Desenvolvedor Independente",
                 timeframe: "2022 — Presente",
-                role: "Backend & Game Dev",
-                description: "Mais de 2 anos desenvolvendo soluções personalizadas e arquitetura de sistemas.",
+                role: "Desenvolvedor Backend e de Jogos",
+                achievements: [
+                    "Mais de 2 anos desenvolvendo soluções personalizadas e arquitetura de sistemas.",
+                    "Criação de sistemas backend robustos e escaláveis.",
+                    "Desenvolvimento de cidades completas para servidores FiveM."
+                ],
                 images: [], 
             }
         ] 
