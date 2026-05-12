@@ -9,15 +9,17 @@ const withMDX = mdx({
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],
+
   images: {
+    unoptimized: true,           // ← Soluciona os 400 temporariamente
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.google.com",
-        pathname: "**",
+        hostname: "**",
       },
     ],
   },
+
   sassOptions: {
     compiler: "modern",
     silenceDeprecations: ["legacy-js-api"],
